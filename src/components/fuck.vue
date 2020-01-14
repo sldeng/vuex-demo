@@ -1,35 +1,48 @@
 <template>
   <div class="fuck">
       <h3 @click="add">fuck demo</h3>
-      <h1>{{message}}</h1>
+      
+      <!-- <h1>{{message}}</h1>
+      <h2>{{countAlias}}</h2>
+      <h5>{{countPlusLocalState}}</h5> -->
       <!-- <h4>{{doneTodosCount}}</h4>
       <h4>{{doneTodos}}</h4> -->
+      <h4>{{countLength}}</h4>
   </div>
 </template>
 
 <script>
-import { mapState} from 'vuex'
-import store from '../store'
+// import { mapState} from 'vuex'
+
 export default {
   name: 'fuck',
- computed:mapState({
-   message:state => state.message
- }),
-// computed:{
-//   // ...mapGetters([
-//   //     'doneTodosCount',
-//   //     'doneTodos',
-//   //     // ...
-//   //   ])
-//   }
-//  ,
+  data(){
+    return{
+localCount:1000
+    }
+  },
+//  computed:mapState({
+//    message:state => state.count,
+//    countAlias: 'count',
+//     countPlusLocalState (state) {
+//       return state.count + this.localCount
+//     }
+//  }),
+  computed:{
+    countLength(){
+      return this.$store.getters.doneTodos 
+    }
+  }
+  ,
+
+
  methods:{
   // ...mapMutations({
   //     add: 'show' // 将 `this.add()` 映射为 `this.$store.commit('increment')`
   //   })
   add(){
     // store.dispatch('show')
-    store.commit('SHOW',100)
+    // this.$store.commit('SHOW',100)
   }
  }
  
