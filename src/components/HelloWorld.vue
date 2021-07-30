@@ -18,6 +18,7 @@ export default {
      counter: this.initialCounter
    }
  },
+
  mounted(){
     console.log('1111111')
  },
