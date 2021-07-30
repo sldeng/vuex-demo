@@ -1,7 +1,7 @@
 <template>
   <div id="app">
    
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <HelloWorld msg="Welcome to Your Vue.js App" @hook:mounted="doSomething"  initialCounter="111111111"/>
     <fuck/>
   </div>
 </template>
@@ -13,6 +13,11 @@ export default {
   name: 'app',
   components: {
     HelloWorld,fuck
+  },
+  methods:{
+    doSomething(val){
+      console.log( val,'fuckdosomething')
+    }
   }
 }
 </script>

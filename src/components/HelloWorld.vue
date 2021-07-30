@@ -1,6 +1,7 @@
 <template>
   <div class="hello">
     <h3 @click="add">hello demo</h3>
+    <p>{{counter}}</p>
   </div>
 </template>
 
@@ -8,9 +9,18 @@
 import { mapState ,mapMutations } from 'vuex'
 export default {
   name: 'HelloWorld',
+  props:['initialCounter'],
    computed:mapState({
    message:state => state.message
  }),
+ data:function(){
+   return{
+     counter: this.initialCounter
+   }
+ },
+ mounted(){
+    console.log('1111111')
+ },
  methods:{
   ...mapMutations({
       add: 'show' // 将 `this.add()` 映射为 `this.$store.commit('increment')`
