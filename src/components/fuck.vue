@@ -1,6 +1,6 @@
 <template>
   <div class="fuck">
-      <h3 @click="add">fuck demo</h3>
+      <!-- <h3 @click="add">fuck demo</h3> -->
       
       <!-- <h1>{{message}}</h1>
       <h2>{{countAlias}}</h2>

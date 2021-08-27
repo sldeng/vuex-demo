@@ -1,18 +1,25 @@
 <template>
   <div id="app">
    
-    <HelloWorld msg="Welcome to Your Vue.js App" @hook:mounted="doSomething"  initialCounter="111111111"/>
-    <fuck/>
+  
+    <menuCom/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-import fuck from './components/fuck.vue'
+import HelloWorld from './components/HelloWorld.vue';
+import fuck from './components/fuck.vue';
+import menuCom from './components/menu.vue';
+
 export default {
   name: 'app',
   components: {
-    HelloWorld,fuck
+    HelloWorld,fuck,menuCom
+  },
+  data(){
+    return {
+demoData:[1,34,5,1,34,5,1,34,5,1,34,5,1,34,5,1,34,5,1,34,5,1,34,5,1,34,5,1,34,5,6]
+    }
   },
   methods:{
     doSomething(val){
